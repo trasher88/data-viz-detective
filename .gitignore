@@ -1,0 +1,34 @@
+# Виртуальное окружение
+venv/
+env/
+ENV/
+
+# Папки с данными (они будут большими)
+data/
+*.db
+*.sqlite3
+
+# Кэш Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# IDE
+.idea/
+.vscode/
+
+# Логи
+*.log
+parser.log
+
+# Streamlit
+.streamlit/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Системные файлы Windows
+Thumbs.db
+desktop.ini
