@@ -32,3 +32,8 @@ parser.log
 # Системные файлы Windows
 Thumbs.db
 desktop.ini
+
+last_run.txt
+
+# Секреты
+.env

@@ -1,0 +1,16 @@
+# Основные библиотеки
+streamlit==1.28.0
+pandas==2.1.0
+plotly==5.17.0
+numpy==1.24.3
+
+# Парсинг и работа с API
+requests==2.31.0
+beautifulsoup4==4.12.0
+
+# База данных
+sqlalchemy==2.0.20
+
+# Telegram бот
+python-telegram-bot==20.3
+python-dotenv==1.0.0
