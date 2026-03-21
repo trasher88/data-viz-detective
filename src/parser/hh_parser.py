@@ -4,6 +4,7 @@ import json
 import logging
 from datetime import datetime
 from typing import List, Dict, Optional
+import re
 
 # Настройка логирования
 logging.basicConfig(level=logging.INFO)
@@ -38,7 +39,6 @@ class HHParser:
             'area': area,
             'page': page,
             'per_page': 100  # Максимум на одной странице
-            #'search_field': 'name'  # Ищем в названии вакансии
         }
 
         try:
@@ -114,6 +114,13 @@ class HHParser:
         if detail.get('key_skills'):
             skills = [skill['name'] for skill in detail['key_skills']]
 
+        # Конвертируем published_at в правильный формат
+        published_at = item['published_at']
+        # Преобразуем '2026-03-21T12:24:15+0300' в '2026-03-21T12:24:15+03:00'
+        if published_at and '+' in published_at:
+            # Добавляем двоеточие в часовой пояс
+            published_at = re.sub(r'([+-]\d{2})(\d{2})$', r'\1:\2', published_at)
+
         # Формируем структурированные данные
         vacancy_data = {
             'vacancy_id': item['id'],
@@ -125,7 +132,7 @@ class HHParser:
             'salary_currency': currency,
             'description': detail.get('description'),
             'key_skills': json.dumps(skills, ensure_ascii=False),
-            'published_at': item['published_at'],
+            'published_at': published_at,
             'url': item['alternate_url']
         }
 
