@@ -38,7 +38,7 @@ class HHParser:
             'text': text,
             'area': area,
             'page': page,
-            'per_page': 100  # Максимум на одной странице
+            'per_page': 50  # Максимум на одной странице
         }
 
         try:
@@ -184,17 +184,17 @@ class HHParser:
                         self._save_raw_data(vacancy_data, item['id'])
 
                         # Маленькая задержка, чтобы не нагружать сервер
-                        time.sleep(0.3)
+                        time.sleep(1.5)
 
                 # Пауза между страницами
-                time.sleep(0.5)
+                time.sleep(1.0)
 
                 # Проверяем, есть ли следующие страницы
                 if page >= search_result.get('pages', 1) - 1:
                     break
 
             # Пауза между разными запросами
-            time.sleep(1)
+            time.sleep(2)
 
         logger.info(f"\n✅ Всего обработано: {len(all_vacancies)} вакансий")
         return all_vacancies
