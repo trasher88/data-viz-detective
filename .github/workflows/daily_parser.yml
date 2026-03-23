@@ -13,7 +13,9 @@ jobs:
 
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v3
+      uses: actions/checkout@v4
+      with:
+        token: ${{ secrets.GITHUB_TOKEN }}
 
     - name: Set up Python
       uses: actions/setup-python@v4
@@ -35,3 +37,5 @@ jobs:
         git add data/raw/ data/vacancies.db last_run.txt
         git diff --quiet && git diff --staged --quiet || git commit -m "Auto-update vacancies $(date +'%Y-%m-%d')"
         git push
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
