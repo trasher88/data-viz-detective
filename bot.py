@@ -72,9 +72,17 @@ async def start(update, context):
         f"👋 Привет, {user.first_name}!\n\n"
         f"Я бот DataViz Detective.\n"
         f"Доступные команды:\n"
-        f"/stats - статистика\n"
-        f"/recent - последние 5 вакансий\n"
-        f"/help - помощь"
+        "/stats — общая статистика\n"
+        "/recent — последние 5 вакансий\n"
+        "/top_companies [N] — топ N компаний\n"
+        "/top_cities [N] — топ N городов\n"
+        "/top_skills [N] — топ N навыков\n"
+        "/salary_by_city [город] — средняя зарплата по городу\n"
+        "/salary_by_level [Junior|Middle|Senior] — зарплата по уровню\n"
+        "/trends — динамика за 30 дней\n"
+        "/search [слово] — поиск вакансий\n"
+        "/help — это сообщение",
+        parse_mode='Markdown'
     )
 
 
