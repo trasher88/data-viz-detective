@@ -153,7 +153,7 @@ python bot.py
 
 ---
 
-ДЕПЛОЙ НА СЕРВЕР
+### ДЕПЛОЙ НА СЕРВЕР
 ```bash
 # Копирование файлов
 scp -r ./* root@YOUR_SERVER:/root/data-viz-detective/
@@ -204,7 +204,7 @@ queries = [
 
 ---
 
-🛠️ ПОЛЕЗНЫЕ КОМАНДЫ ДЛЯ ОБСЛУЖИВАНИЯ
+### 🛠️ ПОЛЕЗНЫЕ КОМАНДЫ ДЛЯ ОБСЛУЖИВАНИЯ
 ```bash
 # Статус сервисов
 systemctl status dataviz_detective
