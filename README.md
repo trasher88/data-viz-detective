@@ -7,8 +7,14 @@
 Автоматизированная система для сбора, анализа и визуализации вакансий для Data-специалистов (Analyst, Scientist, Engineer) с hh.ru.
 
 **🌐 Демо дашборда:** [http://109.73.202.131:8502](http://109.73.202.131:8502)
+### Работа дашборда
+![Дашборд](screenshots/dataviz1.gif)
+
+---
 
 **🤖 Telegram-бот:** [@Datavizdetectivebot](https://t.me/Datavizdetectivebot) — команды: `/stats`, `/recent`, `/top_companies`, `/search`, `/trends` и другие.
+### Работа бота
+![Telegram](screenshots/dataviz2.gif)
 
 ---
 
